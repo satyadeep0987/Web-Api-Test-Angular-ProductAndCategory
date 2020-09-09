@@ -1,0 +1,30 @@
+<h1> ******Insert Product******</h1>
+<form #InsertProductform="ngForm" (ngSubmit)="Insert(InsertProductform)">
+    <table >
+        <tr>
+            <td>Enter Product Name:</td>
+            <td><input type="text" name="ProductName" id="n1" [(ngModel)]="model.ProductName" #ProductName="ngModel" required></td>
+            <td><span *ngIf="ProductName.errors?.required">Product Name cannot be empty</span></td>
+
+        </tr>
+
+        <tr>
+            <td>Enter Category ID:</td>
+            <td><input type="number" name="categoryId" id="c1" [(ngModel)]="model.categoryId" #categoryId="ngModel" required></td>
+            <td><span *ngIf="categoryId.errors?.required">Category ID cannot be empty</span></td>
+
+        </tr>
+
+        <tr>
+            <td>Enter Price:</td>
+            <td><input type="number" name="price" id="p1" [(ngModel)]="model.price" #price="ngModel" required></td>
+            <td><span *ngIf="price.errors?.required">Price cannot be empty</span></td>
+        </tr>
+
+        <tr>
+            <td><button type="submit" [disabled]="InsertProductform.invalid">Insert Product</button></td>
+            <td>{{str}}</td>
+        </tr>
+
+    </table>
+</form>

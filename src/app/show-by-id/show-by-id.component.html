@@ -1,0 +1,22 @@
+<h3>Show By ID</h3>
+<table>
+    <tr>
+        <td>Enter Id : </td>
+        <td><input type="text" name="id" #id/></td>
+        <td><input type="button" (click)="showById(id.value)" value="Show Product"/></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Product Name</th>
+        <th>Product Category</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>{{result.ProdID}}</td>
+        <td>{{result.ProdName}}</td>
+        <td>{{result.CatName}}</td>
+        <td>{{result.Price}}</td>
+    </tr>
+</table>
