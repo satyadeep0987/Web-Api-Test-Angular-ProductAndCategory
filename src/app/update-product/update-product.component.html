@@ -1,0 +1,38 @@
+<h3>*******UPDATE********</h3>
+<table>
+    <tr>
+        <td>Enter Id : </td>
+        <td><input type="text" name="id" #id/></td>
+        <td><input type="button" (click)="showById(id.value)" value="Show Product"/></td>
+    </tr>
+</table>
+
+
+<form #UpdateProductform="ngForm" (ngSubmit)="Update(id.value,UpdateProductform)">
+    <table >
+        <tr>
+            <td>Enter Product Name:</td>
+            <td><input type="text" name="ProductName" id="n1" [(ngModel)]="result.ProdName" #ProductName="ngModel"  required></td>
+            <td><span *ngIf="ProductName.errors?.required">Product Name cannot be empty</span></td>
+
+        </tr>
+        <tr>
+            <td>Enter Price:</td>
+            <td><input type="number" name="price" id="p1" [(ngModel)]="result.Price" #price="ngModel"  required></td>
+            <td><span *ngIf="price.errors?.required">Price cannot be empty</span></td>
+        </tr>
+
+        <tr>
+            <td><button type="submit" [disabled]="UpdateProductform.invalid">Update Product</button></td>
+            <td>{{str}}</td>
+        </tr>
+
+        <tr>
+            <td><input type="button" (click)="Delete(id.value)" value="Remove Product"/></td>
+            <td>{{dlt}}</td>
+        </tr>
+
+
+    </table>
+</form>
+

@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { ShowAllProdectsComponent } from './show-all-prodects/show-all-prodects.component';
 import { ShowByIdComponent } from './show-by-id/show-by-id.component';
 import { InsertProductComponent } from './insert-product/insert-product.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+import { SelectAndUpdateDeleteComponent } from './select-and-update-delete/select-and-update-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowAllProdectsComponent,
     ShowByIdComponent,
-    InsertProductComponent
+    InsertProductComponent,
+    UpdateProductComponent,
+    SelectAndUpdateDeleteComponent
   ],
   imports: [
     BrowserModule,

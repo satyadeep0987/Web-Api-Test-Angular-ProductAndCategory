@@ -34,7 +34,7 @@ export class ProductCategoryClientServiceService {
 		 return this.http.post<string>(this.url,pc,this.httpOptions);
 	 }
 
-	 UpdateProduct(id:number,pc:ProductCategory):Observable<string>{
+	 UpdateProduct(id:number,pc:InsertProductDB):Observable<string>{
 		 return this.http.put<string>(this.url+'/'+id,pc,this.httpOptions);
 	 }
 
